@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Invoice Page</span>
+    </div>
+  </nav>
+
+  <!-- Invoice Content Section -->
+  <div class="container my-5">
+    <h2>Description</h2>
+    <p>As a customer/officer, I should be able to view the invoice once the payment is successful.</p>
+
+    <h2 class="mt-4">Acceptance Criteria</h2>
+    <p>The invoice page needs to contain the below details in a read-only format with a print option:</p>
+    <ul>
+      <li>Receiver Name</li>
+      <li>Receiver Address</li>
+      <li>Receiver Pin</li>
+      <li>Receiver Mobile</li>
+      <li>Parcel Weight (g)</li>
+      <li>Parcel Contents Description</li>
+      <li>Parcel Delivery Type</li>
+      <li>Parcel Packing Preference</li>
+      <li>Parcel Pickup Time</li>
+      <li>Parcel Dropoff Time</li>
+      <li>Parcel Service Cost</li>
+      <li>Parcel Payment Time</li>
+    </ul>
+
+    <!-- Invoice Details Section -->
+    <div class="mt-4">
+      <h3>Invoice Details</h3>
+      <form>
+        <div class="mb-3">
+          <label for="receiverName" class="form-label">Receiver Name</label>
+          <input type="text" id="receiverName" class="form-control" value="John Doe" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="receiverAddress" class="form-label">Receiver Address</label>
+          <input type="text" id="receiverAddress" class="form-control" value="123 Main Street, Springfield" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="receiverPin" class="form-label">Receiver Pin</label>
+          <input type="text" id="receiverPin" class="form-control" value="987654" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="receiverMobile" class="form-label">Receiver Mobile</label>
+          <input type="text" id="receiverMobile" class="form-control" value="123-456-7890" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelWeight" class="form-label">Parcel Weight (g)</label>
+          <input type="text" id="parcelWeight" class="form-control" value="500" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelContents" class="form-label">Parcel Contents Description</label>
+          <input type="text" id="parcelContents" class="form-control" value="Clothing, Electronics" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelDeliveryType" class="form-label">Parcel Delivery Type</label>
+          <input type="text" id="parcelDeliveryType" class="form-control" value="Express" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelPacking" class="form-label">Parcel Packing Preference</label>
+          <input type="text" id="parcelPacking" class="form-control" value="Eco-friendly Packaging" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelPickupTime" class="form-label">Parcel Pickup Time</label>
+          <input type="text" id="parcelPickupTime" class="form-control" value="2025-05-15 10:00 AM" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelDropoffTime" class="form-label">Parcel Dropoff Time</label>
+          <input type="text" id="parcelDropoffTime" class="form-control" value="2025-05-15 2:00 PM" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelServiceCost" class="form-label">Parcel Service Cost</label>
+          <input type="text" id="parcelServiceCost" class="form-control" value="$30.00" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="parcelPaymentTime" class="form-label">Parcel Payment Time</label>
+          <input type="text" id="parcelPaymentTime" class="form-control" value="2025-05-14 11:00 AM" readonly>
+        </div>
+
+        <!-- Print Button -->
+        <button type="button" class="btn btn-primary" onclick="window.print()">Print Invoice</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section (Optional) -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Parcel Management. All rights reserved.</p>
+  </footer>
+</body>
+</html>
